@@ -1,10 +1,61 @@
 .App {
   text-align: center;
+  background-color: white;
+}
+
+.header-container {
+  display: flex;
+  width: 1000px;
+  background-color: orange;
+  color: black;
+  flex-wrap: wrap;
+  margin-left: 200px;
+  font-size: 24px;
+  flex-direction: column-reverse;
+  
+}
+.login-container , .hi-user{
+  background-color: wheat;
+  width: 1000px;
+  margin-left: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.show-store {
+  background-color: white;
+  margin-left: 200px;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.a-store, .b-store{
+  width: 33.3%;
+  border-radius: 10px;
+}
+.a-store{
+  background-color: grey ;
+  
+}
+.b-store{
+  background-color: wheat;
+}
+.fav-pizza-container{
+  background-color: orange;
+  width: 1000px;
+  margin-left: 200px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.pizza-form-container{
+  width: 1000px;
+  margin-left: 200px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
