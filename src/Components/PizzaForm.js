@@ -44,7 +44,11 @@ export default function PizzaForm () {
           setDisable(!valid)
         })
       },[pizza]);
-
+    
+    let i=0;
+    useEffect ( ()=>{
+        i=1;
+    },[pizzaCheck])
 
     const handleChange = event =>{
         const {checked, value ,name ,type} = event.target; 
@@ -62,12 +66,13 @@ export default function PizzaForm () {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        setPizzaCheck(true);
         axios
         .post("https://reqres.in/api/orders",pizza)
         .then(res =>{
             console.log(res.data);
-            setPizzaCheck(true);  
+            setPizza(res.data); 
+        }).then(res=>{
+            setPizzaCheck(!(pizzaCheck));  
         })
         .catch(err => {
             console.error('Sunucu Hatası', err);
@@ -76,7 +81,7 @@ export default function PizzaForm () {
 
     if(pizzaCheck===true){
         return(
-            <Service/>
+            <Service pizza={pizza}/>
         );
     }
     
