@@ -4,7 +4,7 @@ import  pizzaSecilimler  from '../Datas/pizzaData';
 export default function Service (props) {
      const {pizza} = props;
   return (
-    <div>
+    <div className='service-container'>
       <h1>{pizza.id} ID Sipariş Alındı</h1>
       <div className='service'>
             <div id="service img">
@@ -12,6 +12,7 @@ export default function Service (props) {
             </div>
             <div id="pizza-info">
                 <p>Pizza İsim : {pizza.isim}</p>
+                <p>Pizza Boyut : {pizza.boyut}</p>
                 <p>Pizza Özel : {pizza.ozel==="" ? "Ozel İstek Yok": pizza.ozel}</p>
                 <p>Pizza Tercihi : {pizza.turTercih}</p>
                 {

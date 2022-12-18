@@ -10,9 +10,9 @@ export default function PizzaHome (props) {
     <div className='home-container'>
       <div className="fav-pizza-container">
         <h2 id="fav-pizza-title">{activeUser["user"]} Kodlama Yaparken Favori Yiyeceğin &#128512;</h2>
-        <Link to="/pizza" >Pizza? &#129300;</Link>
+        <Link id="order-pizza" to="/pizza" >Pizza? &#129300;</Link>
       </div>
-      <h2 style={{color:"red"}}>&#129488; İstanbul Enleri &#129488;</h2>
+      <h2 id="best-ist" style={{color:"red"}}>&#129488; İstanbul Enleri &#129488;</h2>
       <div className='show-store'>
       {
         stores.map((store, index) =>(

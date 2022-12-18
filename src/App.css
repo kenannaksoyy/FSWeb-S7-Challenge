@@ -57,6 +57,11 @@
   width: 1000px;
   margin-left: 200px;
 }
+.service-container,#best-ist{
+  width: 1000px;
+  margin-left: 200px;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
